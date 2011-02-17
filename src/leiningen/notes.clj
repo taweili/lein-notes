@@ -4,11 +4,11 @@
   (:use [clojure.contrib.seq-utils :only [indexed]])
   (:use [clojure.java.io :only [file]]))
 
-(defn ^:internal print-note [file, line, count]
+(defn- print-note [file, line, count]
   (if (re-find #"FIXME|OPTIMIZE|TODO" line)
     (println (str (. file getPath) ":" (+ 1 count) "   " line))))
 
-(defn ^:internal find-notes [f]
+(defn- find-notes [f]
   (dorun (map #(print-note f (second %) (first %)) (indexed (read-lines f)))))
 
 (defn notes 

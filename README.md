@@ -11,9 +11,9 @@ done.
 Install
 -----
 
-Add the following to your project.clj
+Run the following command
 
-      :dev-dependencies [[lein-notes "0.0.1"]]
+	$ lein plugin install lein-notes 0.0.1
 
 Usage
 -----

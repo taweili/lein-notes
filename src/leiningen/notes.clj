@@ -5,7 +5,7 @@
   (:use [clojure.java.io :only [file]]))
 
 (defn- print-note [file, line, count]
-  (if (re-find #"FIXME|OPTIMIZE|TODO" line)
+  (if (re-find #"FIXME|OPTIMIZE|TODO|REVISIT|XXX" line)
     (println (str (. file getPath) ":" (+ 1 count) "   " line))))
 
 (defn- find-notes [f]

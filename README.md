@@ -11,9 +11,16 @@ done.
 Install
 -----
 
-Run the following command
+## Leiningen 1.x
+```
+% lein plugin install lein-notes 0.0.2
+```
+## Leiningen 2.x
 
-	$ lein plugin install lein-notes 0.0.1
+add it to ~/.lein/profiles.clj:
+```clojure
+{:user {:plugins [[lein-notes "0.0.2"]]}}
+```
 
 Usage
 -----
@@ -22,11 +29,11 @@ Right now, this reads FIXME, TODO and OPTIMIZE in all source codes and
 skip the classes/, .git/ and lib/ directories. The output is a bit
 rough
 
-	$ lein notes
+$ lein notes
 
 License
 -----
 
-Copyright (C) 2010 David Li
+Copyright (C) 2012 David Li and Hoang Minh Thang
 
 Distributed under the Eclipse Public License, the same as Clojure.
